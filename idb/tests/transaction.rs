@@ -1,6 +1,8 @@
 use idb::{Factory, ObjectStoreParams, TransactionMode};
 use wasm_bindgen_test::wasm_bindgen_test;
 
+wasm_bindgen_test::wasm_bindgen_test_configure!(run_in_browser);
+
 #[wasm_bindgen_test]
 async fn test_transaction_commit() {
     let factory = Factory::new().unwrap();
